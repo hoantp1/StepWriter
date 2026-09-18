@@ -1,0 +1,32 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = {};
+ objectVersion = 56;
+ objects = {
+  A1 = {isa = PBXProject; attributes = {LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600;}; buildConfigurationList = A2; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; mainGroup = A3; productRefGroup = A4; projectDirPath = ""; projectRoot = ""; targets = (A5,);};
+  A2 = {isa = XCConfigurationList; buildConfigurations = (A6,A7); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  A3 = {isa = PBXGroup; children = (A8,A4); sourceTree = "<group>";};
+  A4 = {isa = PBXGroup; children = (A9,); name = Products; sourceTree = "<group>";};
+  A5 = {isa = PBXNativeTarget; buildConfigurationList = B1; buildPhases = (B2,B3,B4); buildRules = (); dependencies = (); name = StepWriter; productName = StepWriter; productReference = A9; productType = "com.apple.product-type.application";};
+  A6 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos;}; name = Debug;};
+  A7 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos;}; name = Release;};
+  A8 = {isa = PBXGroup; children = (C1,C2,C3,C4); path = StepWriter; sourceTree = "<group>";};
+  A9 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepWriter.app; sourceTree = BUILT_PRODUCTS_DIR;};
+  B1 = {isa = XCConfigurationList; buildConfigurations = (B5,B6); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+  B2 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (D1,D2); runOnlyForDeploymentPostprocessing = 0;};
+  B3 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (D3); runOnlyForDeploymentPostprocessing = 0;};
+  B4 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+  B5 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = StepWriter/StepWriter.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = StepWriter/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.StepWriter; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Debug;};
+  B6 = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_ENTITLEMENTS = StepWriter/StepWriter.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = StepWriter/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.StepWriter; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1;}; name = Release;};
+  C1 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepWriterApp.swift; sourceTree = "<group>";};
+  C2 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>";};
+  C3 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>";};
+  C4 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepWriter.entitlements; sourceTree = "<group>";};
+  D1 = {isa = PBXBuildFile; fileRef = C1;};
+  D2 = {isa = PBXBuildFile; fileRef = C2;};
+  D3 = {isa = PBXBuildFile; fileRef = E1;};
+  E1 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT;};
+ };
+ rootObject = A1;
+}
