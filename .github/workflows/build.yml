@@ -1,0 +1,40 @@
+name: Build StepWriter IPA
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Lấy source code
+        uses: actions/checkout@v4
+
+      - name: Chọn Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build ứng dụng
+        run: |
+          xcodebuild \
+            -project StepWriter.xcodeproj \
+            -scheme StepWriter \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build \
+            CONFIGURATION_BUILD_DIR="$PWD/build"
+
+      - name: Tạo IPA
+        run: |
+          mkdir -p Payload
+          cp -R build/StepWriter.app Payload/
+          zip -r StepWriter.ipa Payload
+
+      - name: Đưa IPA lên GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: StepWriter-IPA
+          path: StepWriter.ipa
